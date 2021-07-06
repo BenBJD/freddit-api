@@ -19,7 +19,7 @@ export const read = (id) => {
         .where({ id: id })
 }
 
-export const remove = (id) => {
+export const del = (id) => {
     return db("user").where({ id: id }).del()
 }
 
