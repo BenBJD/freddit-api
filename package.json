@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "express": "^4.17.1",
+    "knex": "^0.95.6",
+    "pg": "^8.6.0"
+  },
+  "name": "freddit-api",
+  "description": "API for freddit",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "run.js",
+  "scripts": {
+    "start": "NODE_ENV=development node run.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BenBJD/freddit-api.git"
+  },
+  "author": "Ben Davison",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/BenBJD/freddit-api/issues"
+  },
+  "homepage": "https://github.com/BenBJD/freddit-api#readme",
+  "devDependencies": {
+    "eslint": "^7.30.0",
+    "eslint-config-prettier": "^8.3.0"
+  }
+}
