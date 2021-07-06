@@ -48,7 +48,7 @@ export const readUserPosts = (id, timeRange) => {
         )
 }
 
-export const readSubfredditPosts = (id, timeRange) => {
+export const readSubfredditPosts = (timeRange, subfreddits) => {
     let day = 0
     let week = 0
     let month = 0
@@ -70,7 +70,7 @@ export const readSubfredditPosts = (id, timeRange) => {
     }
     return db("post")
         .select("*")
-        .where({ subFredditId: id })
+        .whereIn("subfredditId", subfreddits)
         .andWhere(
             "creationTime",
             ">=",
@@ -81,7 +81,7 @@ export const readSubfredditPosts = (id, timeRange) => {
         )
 }
 
-export const readAllPosts = (timeRange) => {
+export const readAllPosts = timeRange => {
     let day = 0
     let week = 0
     let month = 0
